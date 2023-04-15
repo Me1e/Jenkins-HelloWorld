@@ -43,7 +43,7 @@ podTemplate(yaml: '''
       container('kaniko') {
         stage('Upload to DockerHub') {
           sh "/kaniko/executor --context `pwd` --destination me1e/90daysofdevops:${env.BUILD_ID}"
-          sh "/kaniko/executor --context `pwd` --destination me1e/90daysofdebops:latest"  
+          sh "/kaniko/executor --context `pwd` --destination me1e/90daysofdevops:latest"  
         }
       }
     }

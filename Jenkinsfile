@@ -42,8 +42,8 @@ podTemplate(yaml: '''
     stage('Build Hello World App') {
       container('kaniko') {
         stage('Upload to DockerHub') {
-          sh "/kaniko/executor --context `pwd` --destination me1e/90day:${env.BUILD_ID}"
-          sh "/kaniko/executor --context `pwd` --destination me1e/90day:latest"  
+          sh "/kaniko/executor --context `pwd` --destination me1e/helloword:${env.BUILD_ID}"
+          sh "/kaniko/executor --context `pwd` --destination me1e/helloword:latest"  
         }
       }
     }

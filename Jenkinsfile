@@ -4,7 +4,7 @@ podTemplate(yaml: '''
     spec:
       containers:
       - name: maven
-        image: maven:3.8.1-jdk-8
+        image: maven
         command:
         - sleep
         args:
